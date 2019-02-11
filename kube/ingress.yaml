@@ -16,7 +16,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: hocs-frontend
+          serviceName: hocs-test-viewer
           servicePort: 443
         path: /   
   tls:
