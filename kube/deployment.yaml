@@ -109,7 +109,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: cs-test-s3
-                key: gaccess_key_id
+                key: access_key_id
           - name: S3_SECRET_KEY
             valueFrom:
               secretKeyRef:
