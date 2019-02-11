@@ -10,7 +10,7 @@ const createPage = (body) => {
     let html = `<!DOCTYPE html>
     <html>
         <head>
-            <title>PTTG Test Reports Dashboard</title>
+            <title>HOCS Test Reports Dashboard</title>
             <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="/styles/styles.css">
             <link rel="icon" href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/images/crests/ho_crest_18px.png?raw=true">
