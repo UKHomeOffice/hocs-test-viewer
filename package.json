@@ -1,0 +1,28 @@
+{
+  "name": "hocs-test-viewer",
+  "version": "1.0.0",
+  "description": "rps test dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "DASHBOARD_BUCKET=cs-test-s3 nodemon index.js"
+  },
+  "author": "Guy Sidebottom",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.224.1",
+    "express": "^4.16.3",
+    "proxy-agent": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.17.3",
+    "serve-static": "^1.13.2"
+  }
+}
