@@ -6,7 +6,10 @@ metadata:
     ingress.kubernetes.io/secure-backends: "true"
     ingress.kubernetes.io/backend-protocol: "HTTPS"
     kubernetes.io/ingress.class: nginx-external
-    stable.k8s.psg.io/kcm.provider: http  
+    stable.k8s.psg.io/kcm.provider: http
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: test-viewer-basic-auth
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required - HOCS"
   labels:
     stable.k8s.psg.io/kcm.class: default
   name: hocs-test-viewer
