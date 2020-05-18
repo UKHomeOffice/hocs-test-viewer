@@ -27,7 +27,7 @@ pipeline:
       event: push
 
   deploy-to-dev-from-build-number:
-    image: quay.io/ukhomeofficedigital/kd:v0.8.0
+    image: quay.io/ukhomeofficedigital/kd:v1.16.0
     environment:
       - KUBE_NAMESPACE=cs-dev
       - ENVIRONMENT=dev
@@ -43,7 +43,7 @@ pipeline:
       event: [push, tag]
 
   deployment:
-    image: quay.io/ukhomeofficedigital/kd:v0.8.0
+    image: quay.io/ukhomeofficedigital/kd:v1.16.0
     environment:
       - KUBE_NAMESPACE=cs-${DRONE_DEPLOY_TO}
       - ENVIRONMENT=${DRONE_DEPLOY_TO}
