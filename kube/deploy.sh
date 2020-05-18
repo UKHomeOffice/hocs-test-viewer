@@ -23,8 +23,6 @@ echo "Deploying hocs-frontend to ${ENVIRONMENT}"
 echo "domain name: ${DOMAIN_NAME}"
 echo
 
-cd kd
-
 kd --insecure-skip-tls-verify \
     -f ingress.yaml \
     -f deployment.yaml \
