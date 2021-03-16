@@ -105,20 +105,22 @@ spec:
                 - SETUID
                 - SETGID
           env:
+          - name: HTTP_PROXY
+            value: http://hocs-outbound-proxy.{{.KUBE_NAMESPACE}}.svc.cluster.local:31290
           - name: S3_ACCESS_KEY
             valueFrom:
               secretKeyRef:
-                name: cs-test-s3
+                name: cs-integration-testing-s3
                 key: access_key_id
           - name: S3_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: cs-test-s3
+                name: cs-integration-testing-s3
                 key: secret_access_key
           - name: DASHBOARD_BUCKET
             valueFrom:
               secretKeyRef:
-                name: cs-test-s3
+                name: cs-integration-testing-s3
                 key: name
           resources:
             limits:

@@ -15,7 +15,7 @@ if [[ -z ${KUBE_TOKEN} ]] ; then
     exit -1
 fi
 
-export DNS_PREFIX=hocs-test-viewer.cs-notprod
+export DNS_PREFIX=hocs-test-viewer.internal.cs-notprod
 export DOMAIN_NAME=${DNS_PREFIX}.homeoffice.gov.uk
 
 echo
@@ -24,6 +24,7 @@ echo "domain name: ${DOMAIN_NAME}"
 echo
 
 kd --insecure-skip-tls-verify \
+    -f netpol.yaml
     -f ingress.yaml \
     -f deployment.yaml \
     -f service.yaml
