@@ -24,7 +24,7 @@ echo "domain name: ${DOMAIN_NAME}"
 echo
 
 kd --insecure-skip-tls-verify \
-    -f netpol.yaml
+    -f netpol.yaml \
     -f ingress.yaml \
     -f deployment.yaml \
     -f service.yaml
