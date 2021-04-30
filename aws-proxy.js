@@ -180,7 +180,7 @@ exports = module.exports = {
                     })
                     .catch(err => {
                         console.log("get object", bucketPrefix, err, err.stack);
-                        res.send(err);
+                        res.status(err.statusCode || 500).json(err)
                     });
             } else {
                 fs.access('cache/' + bucketPrefix, (err) => {
@@ -210,6 +210,8 @@ exports = module.exports = {
                                     }
 
                                 });
+                            } else {
+                              res.status(err.statusCode || 500).json(err)
                             }
                         });
                     } else {
