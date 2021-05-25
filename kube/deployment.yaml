@@ -3,7 +3,7 @@ apiVersion: extensions/v1
 kind: Deployment
 metadata:
   annotations:
-    downscaler/uptime: Mon-Fri 08:00-17:30 Europe/London
+    downscaler/uptime: Mon-Fri 08:00-18:00 Europe/London
   name: hocs-test-viewer
   labels:
     version: {{.VERSION}}
