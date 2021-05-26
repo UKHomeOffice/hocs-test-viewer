@@ -4,19 +4,20 @@ const s3 = new AWS.S3();
 const app = express();
 const serveStatic = require('serve-static');
 const proxy = require("./aws-proxy");
+const title = process.env.DASHBOARD_TITLE ? process.env.DASHBOARD_TITLE : 'HOCS Test Reports Dashboard';
 
 const createPage = (body) => {
 
     let html = `<!DOCTYPE html>
     <html>
         <head>
-            <title>HOCS Test Reports Dashboard</title>
+            <title>${title}</title>
             <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="/styles/styles.css">
             <link rel="icon" href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/images/crests/ho_crest_18px.png?raw=true">
         </head>
         <body>
-            <h1 class="heading">HOCS Test Reports Dashboard</h1>
+            <h1 class="heading">${title}</h1>
             <div id="border"></div>
             <div id="container">
             <div class="dropdown">
