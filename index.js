@@ -23,9 +23,9 @@ const createPage = (body) => {
             <div class="dropdown">
                 <button onclick="createDropdown()" class="dropbtn">Quick Links</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="/s3">Root</a>
-                        <a href="/s3/qa">QA</a>
-                        <a href="/s3/dev">Development</a>
+                        <a href="/s3/">Root</a>
+                        <a href="/s3/qa/">QA</a>
+                        <a href="/s3/dev/">Development</a>
                     </div>
             </div class="main-body">
             ${body}
