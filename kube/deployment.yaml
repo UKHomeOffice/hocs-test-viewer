@@ -28,7 +28,7 @@ spec:
         - name: registrykey
       containers:
         - name: certs
-          image: quay.io/ukhomeofficedigital/cfssl-sidekick:v0.0.6
+          image: quay.digital.homeoffice.gov.uk/ukhomeofficedigital/cfssl-sidekick:v0.0.6
           securityContext:
             runAsNonRoot: true
             capabilities:
@@ -53,7 +53,7 @@ spec:
               readOnly: true
 
         - name: proxy
-          image: quay.io/ukhomeofficedigital/nginx-proxy:v3.4.2
+          image: quay.digital.homeoffice.gov.uk/ukhomeofficedigital/nginx-proxy:v3.4.2
           imagePullPolicy: Always
           securityContext:
             runAsNonRoot: true
@@ -99,7 +99,7 @@ spec:
             - name: https
               containerPort: 10443
         - name: hocs-test-viewer
-          image: quay.io/ukhomeofficedigital/hocs-test-viewer:{{.VERSION}}
+          image: quay.digital.homeoffice.gov.uk/ukhomeofficedigital/hocs-test-viewer:{{.VERSION}}
           imagePullPolicy: Always
           securityContext:
             runAsNonRoot: true
