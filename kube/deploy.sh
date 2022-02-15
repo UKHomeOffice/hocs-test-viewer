@@ -2,6 +2,7 @@
 
 export KUBE_NAMESPACE=${KUBE_NAMESPACE}
 export KUBE_SERVER=${KUBE_SERVER}
+export KUBE_CERTIFICATE_AUTHORITY="https://raw.githubusercontent.com/UKHomeOffice/acp-ca/master/acp-notprod.crt"
 
 if [[ -z ${VERSION} ]] ; then
     export VERSION=${IMAGE_VERSION}
@@ -23,7 +24,7 @@ echo "Deploying hocs-frontend to ${ENVIRONMENT}"
 echo "domain name: ${DOMAIN_NAME}"
 echo
 
-kd --insecure-skip-tls-verify \
+kd \
     -f netpol.yaml \
     -f ingress.yaml \
     -f deployment.yaml \
