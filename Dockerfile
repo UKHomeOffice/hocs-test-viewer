@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:18
 
 ARG VERSION
 EXPOSE 3000
@@ -10,10 +10,6 @@ ENV NAME hocs-docs
 
 WORKDIR /app
 RUN mkdir -p /app
-
-RUN apt-get update
-RUN apt-get install python python-dev python-pip groff less -y
-RUN pip install awscli
 
 RUN groupadd -r ${GROUP} && \
     useradd -r -u ${USER_ID} -g ${GROUP} ${USER} -d /app && \
